@@ -4,8 +4,8 @@ Form validation for CV in pure Javascript and CSS. All inputs are being validate
 
 This project is part of my course assignment.
 
-### Live demo link
 
+### 🚀 [Live demo link](https://yousuf-basir.github.io/CV-Form-Validation/)
 
 
 ## Run the project
