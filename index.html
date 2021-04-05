@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>15 form input</title>
+  </head>
+  <body>
+    <h1>Submit your CV</h1>
+    <div id="main">
+      <!-- Step 1 -->
+      <div id="step1" class="step">
+        <div class="row">
+          <h2>Basic Info</h2>
+        </div>
+        <div class="row">
+          <label for="full_name">Full name</label>
+          <input
+            class="textInput"
+            type="text"
+            name="full_name"
+            placeholder="Type your full name"
+          />
+          <p style="display: none;" class="error full_name_err">Name must be non-empty latters only</p>
+        </div>
+        <div class="row">
+          <label for="email">Email</label>
+          <input
+            class="textInput"
+            type="text"
+            name="email"
+            placeholder="you@mail.com"
+          />
+          <p style="display: none;" class="error email_err">Please enter a valid email address</p>
+        </div>
+        <div class="row">
+          <label for="phone_number">Phone number</label>
+          <input
+            class="textInput"
+            type="tel"
+            name="phone_number"
+            placeholder="e.g 017xxxxxxxx"
+          />
+          <p style="display: none;" class="error phone_number_err">Phone number must contain 11 digits</p>
+        </div>
+        <div class="gap"></div>
+        <div class="row buttonRow">
+          <button onclick="handleNextButtonClick('step2')" class="nextBtn step1BtnNext">
+            Next
+          </button>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div id="step2" class="step">
+        <div class="row">
+          <h2>Address</h2>
+        </div>
+        <div class="row">
+          <label for="street_address">Street address</label>
+          <input
+            class="textInput"
+            type="text"
+            name="street_address"
+            placeholder="Road name or number"
+          />
+          <p style="display: none;" class="error street_address_err">Street address should be non empty</p>
+        </div>
+        <div class="row">
+          <label for="division">Division</label>
+          <select id="divisionSelect" class="dropdown" name="division">
+            <option value="" disabled selected>Select one</option>
+            <option value="Barishal">Barishal</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Mymensingh">Mymensingh</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Sylhet">Sylhet</option>
+          </select>
+          <p style="display: none;" class="error division_err">Select one division</p>
+        </div>
+        <div class="row">
+          <label for="district">District</label>
+          <select id="districtSelect" class="dropdown" name="district">
+            <option value="" disabled selected>Select one</option>
+          </select>
+          <p style="display: none;" class="error district_err">Select one district</p>
+        </div>
+        <div class="row">
+          <label for="post_code">Post code</label>
+          <input
+            class="textInput"
+            type="number"
+            name="post_code"
+            placeholder="e.g 1207"
+          />
+          <p style="display: none;" class="error post_code_err">Post code must be 4 digit number</p>
+        </div>
+        <div class="gap"></div>
+        <div class="row buttonRow">
+          <button onclick="handlePrevButtonClick('step1')" class="prevBtn step2BtnPrev">
+            Prev
+          </button>
+          <button onclick="handleNextButtonClick('step3')" class="nextBtn step2BtnNext">
+            Next
+          </button>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div id="step3" class="step">
+        <div class="row">
+          <h2>Skills</h2>
+        </div>
+        <div class="row">
+          <label for="skills">Skills</label>
+          <p>Write your skills in short by comma separated</p>
+          <textarea
+            class="textInput"
+            rows="2"
+            type="text"
+            name="skills"
+            placeholder="e.g Javascrpt, PHP, Python"
+          ></textarea>
+          <p style="display: none;" class="error skills_err">Must enter two or more skill names in comma separated</p>
+        </div>
+        <div class="row">
+          <label for="language">Language</label>
+          <textarea
+            class="textInput"
+            rows="2"
+            type="text"
+            name="language"
+            placeholder="e.g Javascrpt, PHP, Python"
+          ></textarea>
+          <p style="display: none;" class="error language_err">Must enter two or more programming languges in comma separated</p>
+        </div>
+        <div class="row">
+          <label for="github_profile_link">Github profile link</label>
+          <input
+            class="textInput"
+            type="url"
+            name="github_profile_link"
+            placeholder="e.g github.com/yousuf-basir"
+          />
+          <p style="display: none;" class="error github_profile_link_err">Enter a valid github profile URL</p>
+        </div>
+        <div class="row">
+          <label for="portfolio_url">Portfolio URL</label>
+          <input
+            class="textInput"
+            type="url"
+            name="portfolio_url"
+            placeholder="e.g myportfolio.com"
+          />
+          <p style="display: none;" class="error portfolio_url_err">Enter a valid website URL</p>
+        </div>
+        <div class="gap"></div>
+        <div class="row buttonRow">
+          <button onclick="handlePrevButtonClick('step2')" class="prevBtn step3BtnPrev">
+            Prev
+          </button>
+          <button onclick="handleNextButtonClick('step4')" class="nextBtn step3BtnNext">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div id="step4" class="step">
+        <div class="row">
+          <h2>Tell us a bit more</h2>
+        </div>
+        <div class="row">
+          <label for="career_objective">Career objective</label>
+          <textarea
+            class="textInput"
+            rows="3"
+            type="text"
+            name="career_objective"
+            placeholder="Tell us why you want join us"
+          ></textarea>
+          <p style="display: none;" class="error career_objective_err">Write minimum 10 words</p>
+        </div>
+        <div class="row">
+          <label for="experience">Experience</label>
+          <textarea
+            class="textInput"
+            rows="3"
+            type="text"
+            name="experience"
+            placeholder="Let us know about any work 
+experience you have"
+          ></textarea>
+          <p style="display: none;" class="error experience_err">Write minimum 20 words</p>
+        </div>
+        <div class="gap"></div>
+        <div class="row buttonRow">
+          <button onclick="handlePrevButtonClick('step3')" class="prevBtn step4BtnPrev">
+            Prev
+          </button>
+          <button onclick="handleNextButtonClick('step5')" class="nextBtn step4BtnNext">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div id="step5" class="step">
+        <div class="row">
+          <h2>Set your account</h2>
+        </div>
+        <div class="row">
+          <label for="career_objective">Profile photo</label>
+          <div class="profilePhotoDiv">
+            <img class="profileImage" src="./assets/user.svg" alt="" />
+
+            <div class="selectImageDiv">
+              <span>Select image</span>
+              <input id="imageInput" onchange="previewImage(event)" type="file" accept="image/x-png,image/gif,image/jpeg" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <label for="password">Password</label>
+          <input
+            class="textInput"
+            type="password"
+            name="password"
+            placeholder="Type your new password"
+          />
+          <p style="display: none;" class="error password_err">Minimum eight characters, at least one upper case, one lower case, one number and one special character</p>
+        </div>
+        <div class="row">
+          <label for="confirm_password">Confirm password</label>
+          <input
+            class="textInput"
+            type="password"
+            name="confirm_password"
+            placeholder="Type passowrd again"
+          />
+          <p style="display: none;" class="error confirm_password_err">Password didn't match</p>
+        </div>
+
+        <div class="gap"></div>
+        <div class="row buttonRow">
+          <button onclick="handlePrevButtonClick('step4')" class="prevBtn step4BtnPrev">
+            Prev
+          </button>
+          <button onclick="submitForm()" type="submit" class="submitBtn">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="gap"></div>
+    <div class="gap"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

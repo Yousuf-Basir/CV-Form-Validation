@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* 
+Light 300
+Regular 400
+Medium 500
+Semi-bold 600
+font-family: 'Poppins', sans-serif;
+ */
+
+#step2,
+#step3,
+#step4,
+#step5 {
+  display: none;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  margin: 10px 20px 30px 20px;
+  color: #5922ce;
+  padding-top: 20px;
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+h2 {
+  margin: 0;
+  color: #5922ce;
+  padding-top: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+label {
+  display: block;
+  color: #070707;
+  margin: 20px 0 3px 0;
+  font-weight: 400;
+  font-size: 20px;
+}
+.error {
+  color: rgb(245, 28, 39);
+}
+input,
+textarea {
+  width: calc(100% - 15px);
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #616161;
+  border-radius: 6px;
+  resize: none;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #5922ce;
+}
+.dropdown {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #616161;
+  border-radius: 6px;
+  -webkit-appearance: none;
+}
+
+.dropdown:focus {
+  outline: none;
+  border: 2px solid #5922ce;
+}
+.gap {
+  height: 50px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+}
+#main {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#step1,
+#step2,
+#step3,
+#step4,
+#step5 {
+  background-color: #ffffff;
+  border-radius: 13px;
+  width: 90vw;
+  -webkit-box-shadow: 2px 4px 15px 0px rgba(89, 34, 206, 0.25);
+  -moz-box-shadow: 2px 4px 15px 0px rgba(89, 34, 206, 0.25);
+  box-shadow: 2px 4px 15px 0px rgba(89, 34, 206, 0.25);
+  max-width: 400px;
+}
+.row {
+  /* height: 60px; */
+  padding: 0 30px 0 30px;
+}
+
+.row > p {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.prevBtn {
+  border: none;
+  outline: none;
+  color: #5922ce;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #ffffff;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.nextBtn,
+.submitBtn {
+  height: 38px;
+  width: 100px;
+  background-color: #5922ce;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 9px;
+  -webkit-box-shadow: 2px 4px 15px 0px rgba(89, 34, 206, 0.25);
+  -moz-box-shadow: 2px 4px 15px 0px rgba(89, 34, 206, 0.25);
+  box-shadow: 2px 4px 15px 0px rgba(89, 34, 206, 0.25);
+  cursor: pointer;
+}
+.nextBtn:focus {
+  background-color: rgb(65, 53, 238);
+  box-shadow: none;
+}
+
+.profilePhotoDiv {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImage {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.selectImageDiv {
+  position: relative;
+  margin: 10px 0 20px 0;
+  height: 20px;
+  overflow: hidden;
+}
+.selectImageDiv > input {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 50px;
+}
+.selectImageDiv > span {
+  color: #5922ce;
+  text-decoration: underline;
+}
